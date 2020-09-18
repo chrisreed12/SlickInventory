@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:id="modPartPane" prefHeight="400.0" prefWidth="400.0"
+            style="-fx-background-color: DARKGRAY;" xmlns="http://javafx.com/javafx/10.0.2-internal"
+            fx:controller="viewController.ModPartController">
+    <children>
+        <Text fill="DARKBLUE" layoutX="47.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Modify Part"
+              AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="25.0">
+            <font>
+                <Font name="Droid Sans Bold" size="16.0"/>
+            </font>
+        </Text>
+        <RadioButton fx:id="modInHouseRB" layoutX="120.0" layoutY="15.0" mnemonicParsing="false" text="In-House"
+                     AnchorPane.leftAnchor="130.0" AnchorPane.topAnchor="25.0"/>
+        <RadioButton fx:id="modOutsourcedRB" layoutX="225.0" layoutY="15.0" mnemonicParsing="false" text="Outsourced"
+                     AnchorPane.leftAnchor="230.0" AnchorPane.topAnchor="25.0"/>
+        <Text layoutX="33.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID"
+              AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="75.0"/>
+        <Text layoutX="33.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name"
+              AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="115.0"/>
+        <Text layoutX="33.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inv"
+              AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="155.0"/>
+        <Text layoutX="33.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price/Cost"
+              AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="195.0"/>
+        <Text layoutX="33.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Max"
+              AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="240.0"/>
+        <Text fx:id="modOutIHTxt" layoutX="33.0" layoutY="288.0" strokeType="OUTSIDE" strokeWidth="0.0"
+              text="Machine ID" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="285.0"/>
+        <Text layoutX="200.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Min"
+              AnchorPane.leftAnchor="220.0" AnchorPane.topAnchor="240.0"/>
+        <TextField fx:id="modPartIDTF" layoutX="94.0" layoutY="58.0" style="-fx-background-color: lightgray;"
+                   AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="70.0"/>
+        <TextField fx:id="modPartNameTF" layoutX="94.0" layoutY="98.0" AnchorPane.leftAnchor="120.0"
+                   AnchorPane.topAnchor="110.0"/>
+        <TextField fx:id="modPartInvTF" layoutX="94.0" layoutY="136.0" AnchorPane.leftAnchor="120.0"
+                   AnchorPane.topAnchor="150.0"/>
+        <TextField fx:id="modPartPriceTF" layoutX="94.0" layoutY="177.0" AnchorPane.leftAnchor="120.0"
+                   AnchorPane.topAnchor="190.0"/>
+        <TextField fx:id="modPartMaxTF" layoutX="94.0" layoutY="225.0" prefWidth="75.0" AnchorPane.leftAnchor="120.0"
+                   AnchorPane.topAnchor="235.0"/>
+        <TextField fx:id="modPartMinTF" layoutX="265.0" layoutY="225.0" prefWidth="75.0" AnchorPane.leftAnchor="265.0"
+                   AnchorPane.topAnchor="235.0"/>
+        <TextField fx:id="modMachOut" layoutX="94.0" layoutY="270.0" AnchorPane.leftAnchor="120.0"
+                   AnchorPane.topAnchor="280.0"/>
+        <Button fx:id="modPartSaveBtn" layoutX="198.0" layoutY="346.0" mnemonicParsing="false" prefWidth="70.0"
+                text="Save"/>
+        <Button fx:id="modPartCnclBtn" layoutX="294.0" layoutY="346.0" mnemonicParsing="false" prefWidth="70.0"
+                text="Cancel"/>
+    </children>
+</AnchorPane>

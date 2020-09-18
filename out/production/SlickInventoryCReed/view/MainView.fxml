@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="1080.0" style="-fx-background-color: darkgray;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewController.MainController">
+    <children>
+        <Text fill="DARKBLUE" layoutX="47.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Slick Inventory Management System" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="15.0">
+            <font>
+                <Font name="DejaVu Sans Bold" size="16.0" />
+            </font>
+        </Text>
+        <AnchorPane layoutX="48.0" layoutY="100.0" prefHeight="200.0" prefWidth="500.0" style="-fx-border-color: #00008b; -fx-border-radius: 20;" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="50.0">
+            <children>
+                <Text fill="DARKBLUE" layoutX="27.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Parts" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
+                    <font>
+                        <Font name="DejaVu Serif Bold" size="14.0" />
+                    </font>
+                </Text>
+                <TextField fx:id="partSearchTxt" layoutX="315.0" layoutY="16.0" promptText="Enter Part Name or ID" style="-fx-background-color: white;" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="15.0" />
+                <Button fx:id="partSearchBtn" layoutX="228.0" layoutY="17.0" mnemonicParsing="false" prefWidth="70.0" style="-fx-border-color: black; -fx-border-radius: 5;" text="Search" AnchorPane.rightAnchor="215.0" AnchorPane.topAnchor="15.0" />
+                <TableView fx:id="partTable" layoutX="27.0" layoutY="62.0" prefHeight="160.0" prefWidth="365.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="60.0">
+                    <columns>
+                        <TableColumn fx:id="partIDColumn" prefWidth="100.0" resizable="false" text="Part ID" />
+                        <TableColumn fx:id="partNameColumn" prefWidth="129.0" text="Part Name" />
+                        <TableColumn fx:id="partStockColumn" prefWidth="100.0" text="Inventory" />
+                        <TableColumn fx:id="partPriceColumn" prefWidth="100.0" text="Price/Cost per Unit" />
+                    </columns>
+                </TableView>
+                <Button fx:id="partAddBtn" layoutX="196.0" layoutY="248.0" mnemonicParsing="false" prefWidth="70.0" style="-fx-border-color: black; -fx-border-radius: 5;" text="Add" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="215.0" />
+                <Button fx:id="partModBtn" layoutX="279.0" layoutY="248.0" mnemonicParsing="false" prefWidth="70.0" style="-fx-border-color: black; -fx-border-radius: 5;" text="Modify" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="120.0" />
+                <Button fx:id="partDelBtn" layoutX="356.0" layoutY="248.0" mnemonicParsing="false" prefWidth="70.0" style="-fx-border-color: black; -fx-border-radius: 5;" text="Delete" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="25.0" />
+                <Text fx:id="partAlertText" layoutX="40.0" layoutY="259.0" strokeType="OUTSIDE" strokeWidth="0.0" AnchorPane.bottomAnchor="65.0" AnchorPane.leftAnchor="25.0">
+                    <font>
+                        <Font name="DejaVu Sans Bold" size="14.0" />
+                    </font>
+                </Text>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="760.0" layoutY="100.0" prefHeight="200.0" prefWidth="500.0" style="-fx-border-color: #00008b; -fx-border-radius: 20;" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="50.0">
+            <children>
+                <Text fx:id="prodAlertText" strokeType="OUTSIDE" strokeWidth="0.0" AnchorPane.bottomAnchor="65.0" AnchorPane.leftAnchor="25.0">
+                    <font>
+                        <Font name="DejaVu Sans Bold" size="14.0" />
+                    </font>
+                </Text>
+                <TextField fx:id="prodSearchTxt" layoutX="300.0" layoutY="13.0" promptText="Enter Product Name or ID" style="-fx-background-color: white;" AnchorPane.rightAnchor="25.0" />
+                <Button fx:id="prodSearchBtn" layoutX="213.0" layoutY="14.0" mnemonicParsing="false" style="-fx-border-color: black; -fx-border-radius: 5;" text="Search" AnchorPane.rightAnchor="215.0" />
+                <Text fill="DARKBLUE" layoutX="19.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Products" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
+                    <font>
+                        <Font name="DejaVu Serif Bold" size="14.0" />
+                    </font>
+                </Text>
+                <TableView fx:id="productTable" layoutX="177.0" layoutY="79.0" prefHeight="160.0" prefWidth="365.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="60.0">
+                    <columns>
+                        <TableColumn fx:id="prodIDColumn" prefWidth="100.0" resizable="false" text="Product ID" />
+                        <TableColumn fx:id="prodNameColumn" prefWidth="129.0" text="Product Name" />
+                        <TableColumn fx:id="prodStockColumn" prefWidth="100.0" text="Inventory" />
+                        <TableColumn fx:id="prodPriceColumn" prefWidth="100.0" text="Price/Cost per Unit" />
+                    </columns>
+                </TableView>
+                <Button fx:id="prodAddBtn" layoutX="346.0" layoutY="265.0" mnemonicParsing="false" prefWidth="70.0" style="-fx-border-color: black; -fx-border-radius: 5;" text="Add" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="215.0" />
+                <Button fx:id="prodModBtn" layoutX="429.0" layoutY="265.0" mnemonicParsing="false" prefWidth="70.0" style="-fx-border-color: black; -fx-border-radius: 5;" text="Modify" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="115.0" />
+                <Button fx:id="prodDltBtn" layoutX="506.0" layoutY="265.0" mnemonicParsing="false" prefWidth="70.0" style="-fx-border-color: black; -fx-border-radius: 5;" text="Delete" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="25.0" />
+            </children>
+        </AnchorPane>
+      <Button fx:id="exitBtn" layoutX="985.0" layoutY="10.0" mnemonicParsing="false" prefWidth="70.0" style="-fx-border-color: black; -fx-border-radius: 5;" text="Exit" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="10.0" />
+    </children>
+    <effect>
+        <DropShadow />
+    </effect>
+</AnchorPane>
